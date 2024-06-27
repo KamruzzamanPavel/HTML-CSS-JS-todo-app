@@ -1,0 +1,113 @@
+body {
+  min-height: 100vh;
+  background-color: black;
+}
+
+#container {
+  margin: 32px;
+  padding-top: 12px;
+  border-radius: 5px;
+  font: 26px sans-serif;
+  text-align: center;
+  overflow: hidden;
+  min-height: 90vh;
+  outline: solid 1px rgb(190, 187, 187);
+  background-color: lightgray;
+}
+
+#todos {
+  padding: 1px;
+  margin: 1rem;
+  border-radius: 5px;
+  min-height: 80vh;
+  background-color: darkgray;
+}
+
+#todos p {
+  z-index: 1;
+  cursor: pointer;
+  text-align: left;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgb(67, 66, 66);
+  color: white;
+  width: 98%;
+  outline: rgb(30, 125, 160) 1px solid;
+}
+
+#todos p::before {
+  color: lightskyblue;
+  content: "[_]";
+}
+
+#todos p.checked {
+  padding-top: 0;
+}
+
+#todos .todo_holder > p.checked::before {
+  z-index: 2;
+  content: "[\2713]";
+  color: rgb(231, 12, 12);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+#todos #dlbtn,
+#todos .editbtn,
+#todos .togglebtn {
+  z-index: 1;
+  color: lightcoral;
+  cursor: pointer;
+  float: right;
+  text-align: center;
+  font-weight: 100;
+  background-color: rgb(67, 65, 65);
+  margin: 10px;
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+#todos #dlbtn:active,
+#todos .editbtn:active,
+#todos .togglebtn:active {
+  border-radius: 5px;
+  background-color: aqua;
+}
+
+#todos #dlbtn:hover,
+#todos .editbtn:hover,
+#todos .togglebtn:hover {
+  background-color: black;
+  color: crimson;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+input {
+  color: crimson;
+}
+
+button:active {
+  background-color: aqua;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(10, 121, 218);
+}
+
+#todos .todo_holder {
+  display: grid;
+  grid-template-columns: 60% 10% 10% 10%;
+  z-index: -1;
+}

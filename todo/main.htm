@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="shortcut icon" href="download.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="add_todo">
+        <input id="input_todo" type="text" placeholder="Add todo..." />
+        <button onclick="add_todo()">Add Task</button>
+        <button onclick="delete_all()">Delete All</button>
+        <button onclick="undo()">Undo</button>
+      </div>
+      <div id="todos"></div>
+      <script src="wow.js"></script>
+    </div>
+  </body>
+</html>
